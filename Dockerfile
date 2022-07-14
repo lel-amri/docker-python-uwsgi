@@ -1,5 +1,8 @@
 FROM docker.io/python:3.10-alpine
 
+LABEL org.opencontainers.image.source="https://github.com/lel-amri/docker-python-uwsgi" \
+      org.opencontainers.image.base.name="docker.io/python:3.10-alpine"
+
 ARG UWSGI_VERSION=2.0.20
 
 COPY buildconfig.ini /buildconfig.ini
